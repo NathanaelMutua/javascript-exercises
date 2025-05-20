@@ -42,21 +42,29 @@ console.log("---------------------------------------------------------")
 // Write a function called isNegative that takes a number as it's only argument, the function should return true if the passed number is a negative number and false if the passed number is not a negative number.
 
 let isNegative = function(number){
-    let result = null;
     if (number < 0){
         console.log("true");
     } else {
         console.log("false");
     }
 }
-isNegative(-35);
+isNegative(-23);
+isNegative(55);
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------")
 // Challenge 5: Can I Drive
 // Write a function that takes in a person's name and age. If they're 18 or older, return a message like 'Alice is old enough to drive.' If they're younger, return 'Bob is not old enough to drive yet.'
 
-
+function driverAbility(name, age){
+    if (age >= 18){
+        console.log(`${name} is old enough to drive drive`);
+    } else {
+        console.log(`${name} is not old enough to drive yet`);
+    }
+}
+driverAbility("Jane", 22);
+driverAbility("June", 12);
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------")
