@@ -115,6 +115,21 @@ console.log("---------------------------------------------------------");
 // 25 – 29.9	Overweight
 // 30 or more	Obese
 
+let calculateBMI = function(weight, height){
+    let BMI = weight / (height * height)
+    if (BMI < 18.5){
+        console.log(`Your BMI is ${BMI} - Underweight`)
+    } else if (BMI >= 18.5 && BMI <= 24.9){
+        console.log(`Your BMI is ${BMI} - Normal weight`)
+    } else if (BMI >= 25 && BMI <= 29.9){
+        console.log(`Your BMI is ${BMI} - Overweight`)
+    } else if (BMI >= 30){
+        console.log(`Your BMI is ${BMI} - Obese`)
+    }
+}
+calculateBMI(68, 1.75); 
+calculateBMI(85, 1.8);
+
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 8: Greeting Based on time
