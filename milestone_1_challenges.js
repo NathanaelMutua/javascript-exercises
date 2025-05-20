@@ -1,80 +1,107 @@
 // Challenge 1: Return the sum of two numbers
 // Create a function called addition that takes two numbers as arguments and returns their sum.
 
-function addition(num1, num2){ //function declaration
-    console.log(num1 + num2);
+function addition(num1, num2) {
+  //function declaration
+  console.log(num1 + num2);
 }
 addition(3, 5);
 
-let addition2 = function(num1, num2){ //tried function expression
-    console.log(num1 + num2);
-}
+let addition2 = function (num1, num2) {
+  //tried function expression
+  console.log(num1 + num2);
+};
 addition(-6, 9);
 
 let addition3 = (num1, num2) => console.log(num1 + num2); //tried arrow function, which was the tricky one
 addition3(4, 4);
 
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 2: Convert minutes into seconds
 // Write a function called convert that takes an integer minutes and converts it to seconds.
 
 //in essence 1min = 60 seconds
-let convert = function(mins){
-    let secs = mins * 60; // used a local scope variable declaration(learnt tdy)
-    console.log(`${mins} minutes = ${secs} seconds`) // used string literals
-}
+let convert = function (mins) {
+  let secs = mins * 60; // used a local scope variable declaration(learnt tdy)
+  console.log(`${mins} minutes = ${secs} seconds`); // used string literals
+};
 convert(5);
 convert(2);
 
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 3: Perimeter of a rectangle
 // Create a function that takes length and width and finds the perimeter of a rectangle.
 
-let findPerimeter = (length, width) => console.log("Rectangle of length:" + length + " and width:" + width + " has perimeter:" + (2*(length + width)));
+let findPerimeter = (length, width) =>
+  console.log(
+    "Rectangle of length:" +
+      length +
+      " and width:" +
+      width +
+      " has perimeter:" +
+      2 * (length + width)
+  );
 findPerimeter(6, 7);
 findPerimeter(20, 10);
 
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 4: Check Negative
 // Write a function called isNegative that takes a number as it's only argument, the function should return true if the passed number is a negative number and false if the passed number is not a negative number.
 
-let isNegative = function(number){
-    if (number < 0){
-        console.log("true");
-    } else {
-        console.log("false");
-    }
-}
+let isNegative = function (number) {
+  if (number < 0) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+};
 isNegative(-23);
 isNegative(55);
 
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 5: Can I Drive
 // Write a function that takes in a person's name and age. If they're 18 or older, return a message like 'Alice is old enough to drive.' If they're younger, return 'Bob is not old enough to drive yet.'
 
-function driverAbility(name, age){
-    if (age >= 18){
-        console.log(`${name} is old enough to drive drive`);
-    } else {
-        console.log(`${name} is not old enough to drive yet`);
-    }
+function driverAbility(name, age) {
+  if (age >= 18) {
+    console.log(`${name} is old enough to drive drive`);
+  } else {
+    console.log(`${name} is not old enough to drive yet`);
+  }
 }
 driverAbility("Jane", 22);
 driverAbility("June", 12);
 
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 6: Largest Number
 // Write a function called findLargest(a, b, c) that takes three numbers and returns the largest of the three.
 
-
+function findLargest(a, b,c){
+    if (a > b){
+        if (a > c){
+            console.log(`largest = ${a}`);
+        } else{
+            console.log(`largest = ${c}`);
+        }
+    } else{
+        if (b > c){
+            console.log(`largest = ${b}`);
+        } else{
+        console.log(`largest = ${c}`);
+        }
+    }
+}
+findLargest(5, 9, 3);
+findLargest(10, 10, 10);
+findLargest(-1, -5, -3);
 
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 7: BMI Calculator
 // Write a function called calculateBMI(weight, height) that calculates the Body Mass Index (BMI) using the following formula:
 // BMI = weight / (height * height)
@@ -88,10 +115,8 @@ console.log("---------------------------------------------------------")
 // 25 – 29.9	Overweight
 // 30 or more	Obese
 
-
-
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 8: Greeting Based on time
 // Write a function called greetUser(name, hour) that returns a personalized greeting based on the hour of the day.
 // The name is a string representing the user's name.
@@ -102,10 +127,8 @@ console.log("---------------------------------------------------------")
 // "Good evening, Alice!" if the hour is between 18 and 21
 // "Good night, Alice!" if the hour is 22–4
 
-
-
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 9: FizzBuzz
 // Write a function called fizzBuzzCheck(number) that takes a number and returns:
 // "Fizz" if the number is divisible by 3
@@ -113,46 +136,34 @@ console.log("---------------------------------------------------------")
 // "FizzBuzz" if it’s divisible by both 3 and 5
 // If it’s divisible by neither, return the number itself as a string
 
-
-
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 10: Perimeter2
 // Write a function that takes a number and returns the perimeter of either a circle or a square. The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, and the number will be the side of the square or the radius of the circle.
 // Use the following formulas:
 // Perimeter of a square: 4 _ side. Perimeter of a circle: 6.28 _ radius.
 
-
-
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 11: Sum of Even Numbers
 // Write a function called sumEvenNumbers(n) that takes a number n and returns the sum of all even numbers from 1 up to and including n.
-
-
 
 // -----------------------------------------------------------------------
 // Challenge 12: Multiply by self
 // Write a function called powerUp(num, times) that takes two numbers and returns the result of multiplying num by itself times times using only a loop and arithmetic operators (no Math.pow() allowed).
 
-
-
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 13: Factorial Calculator
 // Write a function called factorial(n) that takes a non-negative integer n and returns the factorial of n — that’s the product of all positive integers from 1 up to n. By definition, factorial of 0 is 1.
 
-
-
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 14: Multiple Sum
 // Write a function called sumMultiples(n, divisor) that returns the sum of all numbers from 1 up to n that are divisible by divisor.
 
-
-
 // -----------------------------------------------------------------------
-console.log("---------------------------------------------------------")
+console.log("---------------------------------------------------------");
 // Challenge 15: Sum of Digits
 // Write a function called sumDigits(num) that takes a positive integer and returns the sum of its digits.
 // Constraints:
