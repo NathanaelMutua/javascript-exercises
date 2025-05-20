@@ -29,10 +29,12 @@ convert(2);
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------")
-// Challenge 3: Perimeter of a rectangel
+// Challenge 3: Perimeter of a rectangle
 // Create a function that takes length and width and finds the perimeter of a rectangle.
 
-
+let findPerimeter = (length, width) => console.log("Rectangle of length:" + length + " and width:" + width + " has perimeter:" + (2*(length + width)));
+findPerimeter(6, 7);
+findPerimeter(20, 10);
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------")
