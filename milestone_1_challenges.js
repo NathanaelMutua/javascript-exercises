@@ -41,7 +41,15 @@ console.log("---------------------------------------------------------")
 // Challenge 4: Check Negative
 // Write a function called isNegative that takes a number as it's only argument, the function should return true if the passed number is a negative number and false if the passed number is not a negative number.
 
-
+let isNegative = function(number){
+    let result = null;
+    if (number < 0){
+        console.log("true");
+    } else {
+        console.log("false");
+    }
+}
+isNegative(-35);
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------")
