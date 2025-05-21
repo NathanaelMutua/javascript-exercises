@@ -5,16 +5,16 @@ function addition(num1, num2) {
   //function declaration
   console.log(num1 + num2);
 }
-addition(3, 5);
+addition(3, 5); // 8
 
 let addition2 = function (num1, num2) {
   //tried function expression
   console.log(num1 + num2);
 };
-addition(-6, 9);
+addition(-6, 9); // 3
 
 let addition3 = (num1, num2) => console.log(num1 + num2); //tried arrow function, which was the tricky one
-addition3(4, 4);
+addition3(4, 4); // 8
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -26,8 +26,8 @@ let convert = function (mins) {
   let secs = mins * 60; // used a local scope variable declaration(learnt tdy)
   console.log(`${mins} minutes = ${secs} seconds`); // used string literals
 };
-convert(5);
-convert(2);
+convert(5); // 5 minutes = 300 seconds
+convert(2); // 2 minutes = 120 seconds
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -43,8 +43,8 @@ let findPerimeter = (length, width) =>
       " has perimeter:" +
       2 * (length + width)
   );
-findPerimeter(6, 7);
-findPerimeter(20, 10);
+findPerimeter(6, 7); // Rectangle of length:6 and width:7 has perimeter:26
+findPerimeter(20, 10); // Rectangle of length:20 and width:10 has perimeter:60
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -58,8 +58,8 @@ let isNegative = function (number) {
     console.log("false");
   }
 };
-isNegative(-23);
-isNegative(55);
+isNegative(-23); // true
+isNegative(55); // false
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -73,8 +73,8 @@ function driverAbility(name, age) {
     console.log(`${name} is not old enough to drive yet`);
   }
 }
-driverAbility("Jane", 22);
-driverAbility("June", 12);
+driverAbility("Jane", 22); // Jane is old enough to drive drive
+driverAbility("June", 12); // June is not old enough to drive yet
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -96,9 +96,9 @@ function findLargest(a, b,c){
         }
     }
 }
-findLargest(5, 9, 3);
-findLargest(10, 10, 10);
-findLargest(-1, -5, -3);
+findLargest(5, 9, 3); // largest = 9
+findLargest(10, 10, 10); // largest = 10
+findLargest(-1, -5, -3); // largest = -1
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -127,8 +127,8 @@ let calculateBMI = function(weight, height){
         console.log(`Your BMI is ${BMI.toFixed(1)} - Obese`)
     }
 }
-calculateBMI(68, 1.75); 
-calculateBMI(85, 1.8);
+calculateBMI(68, 1.75); // Your BMI is 22.2 - Normal weight
+calculateBMI(85, 1.8); // Your BMI is 26.2 - Overweight
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -155,8 +155,8 @@ function greetUser(name, hour){
     console.log(`Hello ${name}, it's kinda early!`)
   }
 }
-greetUser("Johnson", 22);
-greetUser("Mary", 10)
+greetUser("Johnson", 22); // Good night, Johnson!
+greetUser("Mary", 10) // Good morning, Mary!
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -178,10 +178,10 @@ let fizzBuzzCheck = function(number){
     console.log(number)
   }
 }
-fizzBuzzCheck(3);
-fizzBuzzCheck(10);
-fizzBuzzCheck(15);
-fizzBuzzCheck(7);
+fizzBuzzCheck(3); // Fizz
+fizzBuzzCheck(10); //Buzz
+fizzBuzzCheck(15); //FizzBuzz
+fizzBuzzCheck(7); //7
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -189,6 +189,20 @@ console.log("---------------------------------------------------------");
 // Write a function that takes a number and returns the perimeter of either a circle or a square. The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, and the number will be the side of the square or the radius of the circle.
 // Use the following formulas:
 // Perimeter of a square: 4 _ side. Perimeter of a circle: 6.28 _ radius.
+
+function shapePerimeter(letter, number){
+  if (letter == "s"){
+    let perimeter = 4 * number;
+    console.log("Perimeter of the square is " + perimeter);
+  } else if (letter == "c"){
+    let perimeter = 6.28 * number;
+    console.log("Perimeter of the circle is " + perimeter);
+  } else {
+    console.log("Wrong shape letter!");// added this: if the letter is neither 'c' or 's'.
+  }
+}
+shapePerimeter("s", 7); //28
+shapePerimeter("c", 4); //25.12
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
