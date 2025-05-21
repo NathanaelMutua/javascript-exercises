@@ -250,17 +250,17 @@ console.log("---------------------------------------------------------");
 // Challenge 13: Factorial Calculator
 // Write a function called factorial(n) that takes a non-negative integer n and returns the factorial of n — that’s the product of all positive integers from 1 up to n. By definition, factorial of 0 is 1.
 
-let factorial = function(n){
-  if (n >= 0){
+let factorial = function (n) {
+  if (n >= 0) {
     let result = 1;
-    for (let i = 1; i <= n; ++i){
+    for (let i = 1; i <= n; ++i) {
       result = result * i;
     }
-    console.log(result)
-  } else{
-    console.log("The number you entered is a negative value!")
+    console.log(result);
+  } else {
+    console.log("The number you entered is a negative value!");
   }
-}
+};
 factorial(0); // 1
 factorial(4); // 24
 factorial(6); // 720
@@ -271,16 +271,16 @@ console.log("---------------------------------------------------------");
 // Challenge 14: Multiple Sum
 // Write a function called sumMultiples(n, divisor) that returns the sum of all numbers from 1 up to n that are divisible by divisor.
 
-function sumMultiples(n, divisor){
+function sumMultiples(n, divisor) {
   let result = 0;
-  for (let i = 1; i <= n; i++){
-    if (i % divisor == 0){
+  for (let i = 1; i <= n; i++) {
+    if (i % divisor == 0) {
       result = result + i;
     } else {
-      continue
+      continue;
     }
   }
-  console.log(result)
+  console.log(result);
 }
 sumMultiples(10, 2); // 30
 sumMultiples(15, 3); // 45
@@ -294,14 +294,14 @@ console.log("---------------------------------------------------------");
 // You cannot convert the number to a string or use arrays.
 // Use arithmetic operators and loops only.
 
-let sumDigits = function(num){
+let sumDigits = function (num) {
   let sum = 0;
-  for (let i = 0; num > 0; i++){
+  for (let i = 0; num > 0; i++) {
     sum += num % 10;
-    num = Math.floor(num / 10);// This is an entirely new method I picked up
+    num = Math.floor(num / 10); // This is an entirely new method I picked up
   }
-  console.log(sum)
-}
-sumDigits(123);   // 6
-sumDigits(4567);  // 22
-sumDigits(0);     // 0
+  console.log(sum);
+};
+sumDigits(123); // 6
+sumDigits(4567); // 22
+sumDigits(0); // 0
