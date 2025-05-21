@@ -81,20 +81,20 @@ console.log("---------------------------------------------------------");
 // Challenge 6: Largest Number
 // Write a function called findLargest(a, b, c) that takes three numbers and returns the largest of the three.
 
-function findLargest(a, b,c){
-    if (a > b){
-        if (a > c){
-            console.log(`largest = ${a}`);
-        } else{
-            console.log(`largest = ${c}`);
-        }
-    } else{
-        if (b > c){
-            console.log(`largest = ${b}`);
-        } else{
-        console.log(`largest = ${c}`);
-        }
+function findLargest(a, b, c) {
+  if (a > b) {
+    if (a > c) {
+      console.log(`largest = ${a}`);
+    } else {
+      console.log(`largest = ${c}`);
     }
+  } else {
+    if (b > c) {
+      console.log(`largest = ${b}`);
+    } else {
+      console.log(`largest = ${c}`);
+    }
+  }
 }
 findLargest(5, 9, 3); // largest = 9
 findLargest(10, 10, 10); // largest = 10
@@ -115,18 +115,18 @@ console.log("---------------------------------------------------------");
 // 25 – 29.9	Overweight
 // 30 or more	Obese
 
-let calculateBMI = function(weight, height){
-    let BMI = weight / (height * height)
-    if (BMI < 18.5){
-        console.log(`Your BMI is ${BMI.toFixed(1)} - Underweight`) // just learnt that '.toFixed(1)' specifies the decimal places
-    } else if (BMI >= 18.5 && BMI <= 24.9){
-        console.log(`Your BMI is ${BMI.toFixed(1)} - Normal weight`)
-    } else if (BMI >= 25 && BMI <= 29.9){
-        console.log(`Your BMI is ${BMI.toFixed(1)} - Overweight`)
-    } else if (BMI >= 30){
-        console.log(`Your BMI is ${BMI.toFixed(1)} - Obese`)
-    }
-}
+let calculateBMI = function (weight, height) {
+  let BMI = weight / (height * height);
+  if (BMI < 18.5) {
+    console.log(`Your BMI is ${BMI.toFixed(1)} - Underweight`); // just learnt that '.toFixed(1)' specifies the decimal places
+  } else if (BMI >= 18.5 && BMI <= 24.9) {
+    console.log(`Your BMI is ${BMI.toFixed(1)} - Normal weight`);
+  } else if (BMI >= 25 && BMI <= 29.9) {
+    console.log(`Your BMI is ${BMI.toFixed(1)} - Overweight`);
+  } else if (BMI >= 30) {
+    console.log(`Your BMI is ${BMI.toFixed(1)} - Obese`);
+  }
+};
 calculateBMI(68, 1.75); // Your BMI is 22.2 - Normal weight
 calculateBMI(85, 1.8); // Your BMI is 26.2 - Overweight
 
@@ -142,21 +142,21 @@ console.log("---------------------------------------------------------");
 // "Good evening, Alice!" if the hour is between 18 and 21
 // "Good night, Alice!" if the hour is 22–4
 
-function greetUser(name, hour){
-  if (hour >= 5 && hour <= 11){
-    console.log(`Good morning, ${name}!`)
-  } else if (hour >= 12 && hour <= 17){
-    console.log(`Good afternoon, ${name}!`)
-  } else if (hour >= 18 && hour <= 21){
-    console.log(`Good evening, ${name}!`)
-  } else if (hour >= 22 && hour <= 24){
-    console.log(`Good night, ${name}!`)
+function greetUser(name, hour) {
+  if (hour >= 5 && hour <= 11) {
+    console.log(`Good morning, ${name}!`);
+  } else if (hour >= 12 && hour <= 17) {
+    console.log(`Good afternoon, ${name}!`);
+  } else if (hour >= 18 && hour <= 21) {
+    console.log(`Good evening, ${name}!`);
+  } else if (hour >= 22 && hour <= 24) {
+    console.log(`Good night, ${name}!`);
   } else {
-    console.log(`Hello ${name}, it's kinda early!`)
+    console.log(`Hello ${name}, it's kinda early!`);
   }
 }
 greetUser("Johnson", 22); // Good night, Johnson!
-greetUser("Mary", 10) // Good morning, Mary!
+greetUser("Mary", 10); // Good morning, Mary!
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
@@ -167,17 +167,17 @@ console.log("---------------------------------------------------------");
 // "FizzBuzz" if it’s divisible by both 3 and 5
 // If it’s divisible by neither, return the number itself as a string
 
-let fizzBuzzCheck = function(number){
-  if (number % 3 == 0 && number % 5 == 0){
+let fizzBuzzCheck = function (number) {
+  if (number % 3 == 0 && number % 5 == 0) {
     console.log("FizzBuzz");
-  } else if (number % 3 == 0){
+  } else if (number % 3 == 0) {
     console.log("Fizz");
-  } else if (number % 5 == 0){
+  } else if (number % 5 == 0) {
     console.log("Buzz");
   } else {
-    console.log(number)
+    console.log(number);
   }
-}
+};
 fizzBuzzCheck(3); // Fizz
 fizzBuzzCheck(10); //Buzz
 fizzBuzzCheck(15); //FizzBuzz
@@ -190,15 +190,15 @@ console.log("---------------------------------------------------------");
 // Use the following formulas:
 // Perimeter of a square: 4 _ side. Perimeter of a circle: 6.28 _ radius.
 
-function shapePerimeter(letter, number){
-  if (letter == "s"){
+function shapePerimeter(letter, number) {
+  if (letter == "s") {
     let perimeter = 4 * number;
     console.log("Perimeter of the square is " + perimeter);
-  } else if (letter == "c"){
+  } else if (letter == "c") {
     let perimeter = 6.28 * number;
     console.log("Perimeter of the circle is " + perimeter);
   } else {
-    console.log("Wrong shape letter!");// added this: if the letter is neither 'c' or 's'.
+    console.log("Wrong shape letter!"); // added this: if the letter is neither 'c' or 's'.
   }
 }
 shapePerimeter("s", 7); //28
@@ -209,24 +209,41 @@ console.log("---------------------------------------------------------");
 // Challenge 11: Sum of Even Numbers
 // Write a function called sumEvenNumbers(n) that takes a number n and returns the sum of all even numbers from 1 up to and including n.
 
-let sumEvenNumbers = function(n) {
+let sumEvenNumbers = function (n) {
   let sum = 0;
-  for(let i=1; i <= n; i++){
-    if (i % 2 === 0){
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
       sum += i;
     } else {
-      continue
+      continue;
     }
   }
-  console.log(sum)
-}
+  console.log(sum);
+};
 sumEvenNumbers(6); // 12
 sumEvenNumbers(10); // 30
 sumEvenNumbers(5); // 6
 
 // -----------------------------------------------------------------------
+console.log("---------------------------------------------------------");
 // Challenge 12: Multiply by self
 // Write a function called powerUp(num, times) that takes two numbers and returns the result of multiplying num by itself times times using only a loop and arithmetic operators (no Math.pow() allowed).
+
+function powerUp(num, times) {
+  let result = 1;
+  if (times != 0) {
+    for (i = 0; i < times; i++) {
+      result *= num;
+    }
+  } else {
+    result = 1;
+  }
+  console.log(result);
+}
+powerUp(2, 3); // 8
+powerUp(5, 0); // 1
+powerUp(3, 4); // 81
+powerUp(0); // 1
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
