@@ -271,6 +271,21 @@ console.log("---------------------------------------------------------");
 // Challenge 14: Multiple Sum
 // Write a function called sumMultiples(n, divisor) that returns the sum of all numbers from 1 up to n that are divisible by divisor.
 
+function sumMultiples(n, divisor){
+  let result = 0;
+  for (let i = 1; i <= n; i++){
+    if (i % divisor == 0){
+      result = result + i;
+    } else {
+      continue
+    }
+  }
+  console.log(result)
+}
+sumMultiples(10, 2); // 30
+sumMultiples(15, 3); // 45
+sumMultiples(7, 5); // 5
+
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 15: Sum of Digits
