@@ -250,6 +250,22 @@ console.log("---------------------------------------------------------");
 // Challenge 13: Factorial Calculator
 // Write a function called factorial(n) that takes a non-negative integer n and returns the factorial of n — that’s the product of all positive integers from 1 up to n. By definition, factorial of 0 is 1.
 
+let factorial = function(n){
+  if (n >= 0){
+    let result = 1;
+    for (let i = 1; i <= n; ++i){
+      result = result * i;
+    }
+    console.log(result)
+  } else{
+    console.log("The number you entered is a negative value!")
+  }
+}
+factorial(0); // 1
+factorial(4); // 24
+factorial(6); // 720
+factorial(-3); // The number you entered is a negative number
+
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 14: Multiple Sum
