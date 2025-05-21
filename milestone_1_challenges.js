@@ -293,3 +293,15 @@ console.log("---------------------------------------------------------");
 // Constraints:
 // You cannot convert the number to a string or use arrays.
 // Use arithmetic operators and loops only.
+
+let sumDigits = function(num){
+  let sum = 0;
+  for (let i = 0; num > 0; i++){
+    sum += num % 10;
+    num = Math.floor(num / 10);// This is an entirely new method I picked up
+  }
+  console.log(sum)
+}
+sumDigits(123);   // 6
+sumDigits(4567);  // 22
+sumDigits(0);     // 0
