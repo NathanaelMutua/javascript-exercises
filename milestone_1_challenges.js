@@ -167,6 +167,22 @@ console.log("---------------------------------------------------------");
 // "FizzBuzz" if it’s divisible by both 3 and 5
 // If it’s divisible by neither, return the number itself as a string
 
+let fizzBuzzCheck = function(number){
+  if (number % 3 == 0 && number % 5 == 0){
+    console.log("FizzBuzz");
+  } else if (number % 3 == 0){
+    console.log("Fizz");
+  } else if (number % 5 == 0){
+    console.log("Buzz");
+  } else {
+    console.log(number)
+  }
+}
+fizzBuzzCheck(3);
+fizzBuzzCheck(10);
+fizzBuzzCheck(15);
+fizzBuzzCheck(7);
+
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 10: Perimeter2
