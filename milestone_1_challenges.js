@@ -118,13 +118,13 @@ console.log("---------------------------------------------------------");
 let calculateBMI = function(weight, height){
     let BMI = weight / (height * height)
     if (BMI < 18.5){
-        console.log(`Your BMI is ${BMI} - Underweight`)
+        console.log(`Your BMI is ${BMI.toFixed(1)} - Underweight`) // just learnt that '.toFixed(1)' specifies the decimal places
     } else if (BMI >= 18.5 && BMI <= 24.9){
-        console.log(`Your BMI is ${BMI} - Normal weight`)
+        console.log(`Your BMI is ${BMI.toFixed(1)} - Normal weight`)
     } else if (BMI >= 25 && BMI <= 29.9){
-        console.log(`Your BMI is ${BMI} - Overweight`)
+        console.log(`Your BMI is ${BMI.toFixed(1)} - Overweight`)
     } else if (BMI >= 30){
-        console.log(`Your BMI is ${BMI} - Obese`)
+        console.log(`Your BMI is ${BMI.toFixed(1)} - Obese`)
     }
 }
 calculateBMI(68, 1.75); 
@@ -141,6 +141,22 @@ console.log("---------------------------------------------------------");
 // "Good afternoon, Alice!" if the hour is between 12 and 17
 // "Good evening, Alice!" if the hour is between 18 and 21
 // "Good night, Alice!" if the hour is 22–4
+
+function greetUser(name, hour){
+  if (hour >= 5 && hour <= 11){
+    console.log(`Good morning, ${name}!`)
+  } else if (hour >= 12 && hour <= 17){
+    console.log(`Good afternoon, ${name}!`)
+  } else if (hour >= 18 && hour <= 21){
+    console.log(`Good evening, ${name}!`)
+  } else if (hour >= 22 && hour <= 24){
+    console.log(`Good night, ${name}!`)
+  } else {
+    console.log(`Hello ${name}, it's kinda early!`)
+  }
+}
+greetUser("Johnson", 22);
+greetUser("Mary", 10)
 
 // -----------------------------------------------------------------------
 console.log("---------------------------------------------------------");
