@@ -18,6 +18,17 @@ sumOfPositives([1, -3, 5, -2, 9, -8]); // 15
 console.log("---------------------------------------------------------");
 // Challenge 2: Find Maximum Value
 
+let findMax = function(array){
+    let largest = array[0];
+    for(let i = 0; i < array.length; i++){
+        if (array[i] > largest){
+            largest = array[i];
+        }
+    }
+    console.log(largest)
+}
+findMax([3, 7, 2, 9, 5]) // returns: 9
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 3: Election Winner
