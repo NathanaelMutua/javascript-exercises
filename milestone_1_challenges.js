@@ -209,6 +209,21 @@ console.log("---------------------------------------------------------");
 // Challenge 11: Sum of Even Numbers
 // Write a function called sumEvenNumbers(n) that takes a number n and returns the sum of all even numbers from 1 up to and including n.
 
+let sumEvenNumbers = function(n) {
+  let sum = 0;
+  for(let i=1; i <= n; i++){
+    if (i % 2 === 0){
+      sum += i;
+    } else {
+      continue
+    }
+  }
+  console.log(sum)
+}
+sumEvenNumbers(6); // 12
+sumEvenNumbers(10); // 30
+sumEvenNumbers(5); // 6
+
 // -----------------------------------------------------------------------
 // Challenge 12: Multiply by self
 // Write a function called powerUp(num, times) that takes two numbers and returns the result of multiplying num by itself times times using only a loop and arithmetic operators (no Math.pow() allowed).
