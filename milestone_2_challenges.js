@@ -1,5 +1,19 @@
 // Challenge 1: Sum of Positives
 
+function sumOfPositives(array){
+    let sum = 0;
+    let iterations = array.length;
+    for (let i = 0; i < iterations; i++){
+        if (array[i] > -1){
+            sum += array[i];
+        } else {
+            continue
+        }
+    }
+    console.log(sum)
+}
+sumOfPositives([1, -3, 5, -2, 9, -8]); // 15
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 2: Find Maximum Value
