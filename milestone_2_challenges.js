@@ -56,50 +56,60 @@ findWinner(candidates); // { name: "Bob", votes: 75 }
 console.log("---------------------------------------------------------");
 // Challenge 4: Longest Word
 
-function findLongestWord(array){
+function findLongestWord(array) {
   let longest = 0;
   let longestWord = null;
-  for (let i = 0; i < array.length; i++){
+  for (let i = 0; i < array.length; i++) {
     let item = array[i];
-    if (item.length > longest){
+    if (item.length > longest) {
       longest = item.length;
       longestWord = array[i];
     }
   }
-  console.log(longestWord)
+  console.log(longestWord);
 }
-findLongestWord(["apple", "banana", "pear", "grapefruit"]) // grapefruit
+findLongestWord(["apple", "banana", "pear", "grapefruit"]); // grapefruit
 
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 5: Count Properties
 
-let countProperties = function(object){
+let countProperties = function (object) {
   const keys = Object.keys(object); // got this function from a array/object tutorial
-  console.log(keys.length +" properties: "+ keys)
-}
-countProperties({ name: "Alice", age: 25, city: "Paris" }) // 3
+  console.log(keys.length + " properties: " + keys);
+};
+countProperties({ name: "Alice", age: 25, city: "Paris" }); // 3
 
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 6: Filter by Length
 
-function filterByLength(array, minLength){
-  let filteredArray = []
-  for (let i = 0; i < array.length; i++){
+function filterByLength(array, minLength) {
+  let filteredArray = [];
+  for (let i = 0; i < array.length; i++) {
     let string = array[i];
-    if (string.length >= minLength){
-      filteredArray.push(string)
+    if (string.length >= minLength) {
+      filteredArray.push(string);
     }
   }
-  return filteredArray // I wanted to try out return, wasn't really familiar with it
+  return filteredArray; // I wanted to try out return, wasn't really familiar with it
 }
-console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)) // returns: ["giraffe", "hippo", "elephant"]
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // returns: ["giraffe", "hippo", "elephant"]
 
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 7: Sum of Even Numbers
 
+let sumEvenNumbers = function(array){
+  let sum = 0;
+  for (let i = 0; i < array.length; i++){
+    if (array[i] % 2 == 0){
+      sum += array[i];
+    }
+  }
+  console.log(sum)
+}
+sumEvenNumbers([1, 2, 3, 4, 5, 6]) // returns: 12
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 8: Difference Between Sum of Even and Odd Numbers
