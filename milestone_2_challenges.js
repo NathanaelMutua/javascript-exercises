@@ -84,6 +84,18 @@ countProperties({ name: "Alice", age: 25, city: "Paris" }) // 3
 console.log("---------------------------------------------------------");
 // Challenge 6: Filter by Length
 
+function filterByLength(array, minLength){
+  let filteredArray = []
+  for (let i = 0; i < array.length; i++){
+    let string = array[i];
+    if (string.length >= minLength){
+      filteredArray.push(string)
+    }
+  }
+  return filteredArray // I wanted to try out return, wasn't really familiar with it
+}
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)) // returns: ["giraffe", "hippo", "elephant"]
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 7: Sum of Even Numbers
