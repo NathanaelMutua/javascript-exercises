@@ -1,16 +1,16 @@
 // Challenge 1: Sum of Positives
 
-function sumOfPositives(array){
-    let sum = 0;
-    let iterations = array.length;
-    for (let i = 0; i < iterations; i++){
-        if (array[i] > -1){
-            sum += array[i];
-        } else {
-            continue
-        }
+function sumOfPositives(array) {
+  let sum = 0;
+  let iterations = array.length;
+  for (let i = 0; i < iterations; i++) {
+    if (array[i] > -1) {
+      sum += array[i];
+    } else {
+      continue;
     }
-    console.log(sum)
+  }
+  console.log(sum);
 }
 sumOfPositives([1, -3, 5, -2, 9, -8]); // 15
 
@@ -18,20 +18,39 @@ sumOfPositives([1, -3, 5, -2, 9, -8]); // 15
 console.log("---------------------------------------------------------");
 // Challenge 2: Find Maximum Value
 
-let findMax = function(array){
-    let largest = array[0];
-    for(let i = 0; i < array.length; i++){
-        if (array[i] > largest){
-            largest = array[i];
-        }
+let findMax = function (array) {
+  let largest = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > largest) {
+      largest = array[i];
     }
-    console.log(largest)
-}
-findMax([3, 7, 2, 9, 5]) // returns: 9
+  }
+  console.log(largest);
+};
+findMax([3, 7, 2, 9, 5]); // returns: 9
 
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 3: Election Winner
+
+function findWinner(object) {
+  let maxVotes = 0;
+  let winner = null;
+  for (let i = 0; i < object.length; i++) {
+    let candidate = object[i];
+    if (candidate.votes > maxVotes) {
+      maxVotes = candidate.votes;
+      winner = candidate;
+    }
+  }
+  console.log(winner);
+}
+const candidates = [
+  { name: "Alice", votes: 50 },
+  { name: "Bob", votes: 75 },
+  { name: "Charlie", votes: 65 },
+];
+findWinner(candidates); // { name: "Bob", votes: 75 }
 
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
