@@ -110,9 +110,25 @@ let sumEvenNumbers = function(array){
   console.log(sum)
 }
 sumEvenNumbers([1, 2, 3, 4, 5, 6]) // returns: 12
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 8: Difference Between Sum of Even and Odd Numbers
+
+function differenceEvenOdd(array){
+  let sumEven = 0;
+  let sumOdd = 0;
+  for (let i = 0; i < array.length; i++){
+    if (array[i] % 2 == 0){
+      sumEven += array[i];
+    } else {
+      sumOdd += array[i];
+    }
+  }
+  let sumDifferenceEvenAndOdd = sumEven - sumOdd; //slightly concerned that it can give negative values.
+  console.log(sumDifferenceEvenAndOdd)
+}
+differenceEvenOdd([1, 2, 3, 4, 5, 6])// returns: 3
 
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
