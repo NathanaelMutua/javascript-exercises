@@ -144,7 +144,7 @@ function countTruthy(object){
       truthyCount++;
     }
   }
-  console.log(nonTruthyCount)
+  console.log(truthyCount)
 }
 countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }) // returns: 2
 
@@ -172,6 +172,19 @@ average([]) // returns: 0
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 11: Linear Search
+
+function linearSearch(array, value){
+  let firstValueOccurrence = -1;
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === value){
+      firstValueOccurrence = i;
+      break
+    }
+  }
+  console.log(firstValueOccurrence)
+}
+linearSearch([5, 3, 7, 1, 4], 7)  // returns: 2
+linearSearch([5, 3, 7, 1, 4], 10) // returns: -1
 
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
