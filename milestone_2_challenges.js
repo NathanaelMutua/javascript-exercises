@@ -259,6 +259,39 @@ countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]) // r
 console.log("---------------------------------------------------------");
 // Challenge 15: Remove Duplicate
 
+function removeDuplicates(array){
+  const noDuplicatesArray = Array.from(new Set(array));
+  console.log(noDuplicatesArray)
+}
+removeDuplicates([1, 2, 3, 2, 4, 1, 5]) // returns: [1, 2, 3, 4, 5]
+removeDuplicates([1, 4, 5, 3, 2, 3, 2, 4, 1, 5]) // [ 1, 4, 5, 3, 2 ]
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 16: Most Frequent
+
+// I've built this function off of my concept in challenge 14
+function mostFrequent(array){
+  let mostOccuringCount = 0;
+  let mostOccuringValue;
+  const objectKeyNames = new Set(array);
+  const keyNamesArray = Array.from(objectKeyNames);
+  let count = 0;
+  for (let i = 0; i < keyNamesArray.length; i++){
+    for (let j = 0; j < array.length; j++){
+      if (array[j] === keyNamesArray[i]){
+        count += 1;
+      }
+    }
+    if (count > mostOccuringCount){
+      mostOccuringValue = keyNamesArray[i];
+      mostOccuringCount = count;
+    } else {
+      continue
+    }
+    count = 0;
+  }
+  console.log(mostOccuringValue)
+}
+mostFrequent([1, 2, 2, 3, 3, 3, 4]) // returns: 3
+mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]) // returns: "apple"
