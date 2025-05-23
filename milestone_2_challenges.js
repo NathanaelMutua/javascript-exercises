@@ -237,6 +237,24 @@ linearSearchAll([5, 3, 7, 1, 4], 10)    // returns: []
 console.log("---------------------------------------------------------");
 // Challenge 14: Count Occurences
 
+function countOccurrences(array){
+  const objectKeyNames = new Set(array);
+  const keyNamesArray = Array.from(objectKeyNames); // coz I realised sets don't have a .length property or indexing
+  let arrayValueIterations = new Object();
+  let count = 0;
+  for (let i = 0; i < keyNamesArray.length; i++){
+    for (let j = 0; j < array.length; j++){
+      if (array[j] == keyNamesArray[i]){
+        count += 1;
+      }
+    }
+    arrayValueIterations[keyNamesArray[i]] = count; // also came to realise the .dot notation would take the index and not the actual value of the array
+    count = 0;
+  }
+  console.log(arrayValueIterations)
+}
+countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]) // returns: { apple: 3, banana: 2, orange: 1 }
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 15: Remove Duplicate
