@@ -190,6 +190,33 @@ linearSearch([5, 3, 7, 1, 4], 10) // returns: -1
 console.log("---------------------------------------------------------");
 // Challenge 12: Reverse Linear Search
 
+// my first solution...
+function reverseLinearSearch(array, value){
+  let lastValueOccurrence = -1;
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === value){
+      lastValueOccurrence = i; // this will keep updating the value until we come across the last value
+    }
+  }
+  console.log(lastValueOccurrence)
+}
+reverseLinearSearch([5, 3, 7, 1, 4, 7], 7)  // returns: 5
+reverseLinearSearch([5, 3, 7, 1, 4], 10)    // returns: -1
+
+// my second solution...
+function reverseLinearSearch2(array, value){
+  let lastValueOccurrence = -1;
+  for (let i = array.length; i > -1; i--){
+    if (array[i] === value){
+      lastValueOccurrence = i; // this loops throught the array from the back.. I think it's more efficient
+      break
+    }
+  }
+  console.log(lastValueOccurrence)
+}
+reverseLinearSearch2([5, 3, 7, 1, 4, 7], 7)  // returns: 5
+reverseLinearSearch2([5, 3, 7, 1, 4], 10)    // returns: -1
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 13: Linear Search All Indices
