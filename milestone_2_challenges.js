@@ -138,7 +138,7 @@ function countTruthy(object){
   let truthyCount = 0;
   let values = Object.values(object);
   for (let i = 0; i < values.length; i++){
-    if(values[i] == "null" || values[i] == "0" || values[i] == "false" || values[i] == ""){
+    if(values[i] == "null" || values[i] == "0" || values[i] == "false" || values[i] == "" || values[i] == "NaN" || values[i] == "undefined"){
       continue
     } else {
       truthyCount++;
