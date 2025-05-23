@@ -138,6 +138,23 @@ console.log("---------------------------------------------------------");
 console.log("---------------------------------------------------------");
 // Challenge 10: Average of Numbers
 
+// average = sum / number of items
+function average(array){
+  let sumOfItems = 0;
+  for(let i = 0; i < array.length; i++){
+    sumOfItems += array[i];
+  }
+  let averageOfArray = 0;
+  if (array.length != 0){
+    averageOfArray = sumOfItems / array.length;
+  } else{
+    averageOfArray = 0;
+  }
+  console.log(averageOfArray)
+}
+average([2, 4, 6, 8]) // returns: 5
+average([]) // returns: 0
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 11: Linear Search
