@@ -134,6 +134,20 @@ differenceEvenOdd([1, 2, 3, 4, 5, 6])// returns: 3
 console.log("---------------------------------------------------------");
 // Challenge 9: Count Truthy
 
+function countTruthy(object){
+  let truthyCount = 0;
+  let values = Object.values(object);
+  for (let i = 0; i < values.length; i++){
+    if(values[i] == "null" || values[i] == "0" || values[i] == "false" || values[i] == ""){
+      continue
+    } else {
+      truthyCount++;
+    }
+  }
+  console.log(nonTruthyCount)
+}
+countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }) // returns: 2
+
 // ---------------------------------------------------------------
 console.log("---------------------------------------------------------");
 // Challenge 10: Average of Numbers
